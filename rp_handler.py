@@ -75,7 +75,7 @@ def handler(event):
     color = preprocess(base64_to_pil(color_b64))
 
     # Inferencia devuelve tensor
-    result_img = hair_fast(face, shape, color)
+    result_img = hair_fast(face, shape, color, align=True)
 
     # Convertir a base64 y retornar JSON
     return {
